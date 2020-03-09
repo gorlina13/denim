@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Denim — Product Card</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper">
+        <a class="page-header__logo" href="index.html">Nimes</a>
+        <nav class="page-header__nav main-nav main-nav--nojs" aria-label="Primary">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Woman</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Man</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">New</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__user-tools">
+          <form class="search" action="#" method="get" role="search">
+            <input class="search__input" type="search" name="search-field" id="search-field" placeholder="Search Denim">
+            <label class="search__label" for="search-field">
+              <span class="visually-hidden">Search Denim</span>
+              <svg class="search__icon" width="16" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </label>
+          </form>
+          <a class="cart" href="#">
+            <span class="visually-hidden">Cart</span>
+            <svg class="cart__icon" width="16" height="16" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="card wrapper">
+      <section class="card__spec">
+        <h1 class="card__title">Overalls</h1>
+        <p class="card__description">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front pockets and back pockets.</p>
+        <form class="card__form card-form" action="#" method="post" aria-label="Choose color and size and add to cart">
+          <fieldset class="card-form__group">
+            <legend class="card-form__subtitle">Color</legend>
+            <ul class="card-form__list">
+              <li class="card-form__item radio radio--color">
+                <input class="radio__input visually-hidden" type="radio" name="color" id="blue-gray-to-cart" value="blue-gray" checked>
+                <label class="radio__label" for="blue-gray-to-cart">
+                  <span class="visually-hidden">Blue gray</span>
+                </label>
+              </li>
+              <li class="card-form__item radio radio--color">
+                <input class="radio__input visually-hidden" type="radio" name="color" id="navy-to-cart" value="navy">
+                <label class="radio__label" for="navy-to-cart">
+                  <span class="visually-hidden">Navy</span>
+                </label>
+              </li>
+              <li class="card-form__item radio radio--color">
+                <input class="radio__input visually-hidden" type="radio" name="color" id="gray-to-cart" value="gray">
+                <label class="radio__label" for="gray-to-cart">
+                  <span class="visually-hidden">Gray</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="card-form__group">
+            <legend class="card-form__subtitle">Size</legend>
+            <ul class="card-form__list">
+              <li class="card-form__item radio radio--size">
+                <input class="radio__input visually-hidden" type="radio" name="size" id="XS-field" value="XS">
+                <label class="radio__label" for="XS-field">
+                  <span class="visually-hidden">XS</span>
+                </label>
+              </li>
+              <li class="card-form__item radio radio--size">
+                <input class="radio__input visually-hidden" type="radio" name="size" id="S-field" value="S" checked>
+                <label class="radio__label" for="S-field">
+                  <span class="visually-hidden">S</span>
+                </label>
+              </li>
+              <li class="card-form__item radio radio--size">
+                <input class="radio__input visually-hidden" type="radio" name="size" id="M-field" value="M">
+                <label class="radio__label" for="M-field">
+                  <span class="visually-hidden">M</span>
+                </label>
+              </li>
+              <li class="card-form__item radio radio--size">
+                <input class="radio__input visually-hidden" type="radio" name="size" id="L-field" value="L">
+                <label class="radio__label" for="L-field">
+                  <span class="visually-hidden">L</span>
+                </label>
+              </li>
+              <li class="card-form__item radio radio--size">
+                <input class="radio__input visually-hidden" type="radio" name="size" id="XL-field" value="XL">
+                <label class="radio__label" for="XL-field">
+                  <span class="visually-hidden">XL</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <p class="card-form__price">$ 160</p>
+          <button class="card-form__submit button button--card-form" type="submit">Add to cart</button>
+        </form>
+      </section>
+
+      <section class="card__slider slider">
+        <h2 class="visually-hidden">Photo gallery</h2>
+        <div class="slider__inner">
+          <ul class="slider__slides">
+            <li class="slider__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/product-card-desktop.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/product-card-tablet.webp">
+                <source type="image/webp" srcset="img/product-card-mobile.webp">
+
+                <source media="(min-width: 1366px)" srcset="img/product-card-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/product-card-tablet.jpg">
+                <img class="slider__image" src="img/product-card-mobile.jpg" alt="Overalls, $ 160.">
+              </picture>
+            </li>
+            <li class="slider__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/product-card-smaller-1-desktop.webp">
+                <source type="image/webp" srcset="img/product-card-smaller-1-tablet.webp">
+
+                <source media="(min-width: 1366px)" srcset="img/product-card-smaller-1-desktop.jpg">
+                <img class="slider__image" src="img/product-card-smaller-1-tablet.jpg" alt="Overalls, $ 160.">
+              </picture>
+            </li>
+            <li class="slider__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/product-card-smaller-2-desktop.webp">
+                <source type="image/webp" srcset="img/product-card-smaller-2-tablet.webp">
+
+                <source media="(min-width: 1366px)" srcset="img/product-card-smaller-2-desktop.jpg">
+                <img class="slider__image" src="img/product-card-smaller-2-tablet.jpg" alt="Overalls, $ 160.">
+              </picture>
+            </li>
+            <li class="slider__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/product-card-smaller-3-desktop.webp">
+                <source type="image/webp" srcset="img/product-card-smaller-3-tablet.webp">
+
+                <source media="(min-width: 1366px)" srcset="img/product-card-smaller-3-desktop.jpg">
+                <img class="slider__image" src="img/product-card-smaller-3-tablet.jpg" alt="Overalls, $ 160.">
+              </picture>
+            </li>
+            <li class="slider__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="img/product-card-smaller-4-desktop.webp">
+                <source type="image/webp" srcset="img/product-card-smaller-4-tablet.webp">
+
+                <source media="(min-width: 1366px)" srcset="img/product-card-smaller-4-desktop.jpg">
+                <img class="slider__image" src="img/product-card-smaller-4-tablet.jpg" alt="Overalls, $ 160.">
+              </picture>
+            </li>
+          </ul>
+        </div>
+        <ul class="slider__previews">
+          <li>
+            <button class="slider__preview slider__preview--current" type="button">
+              <span class="visually-hidden">Photo 1</span>
+            </button>
+          </li>
+          <li>
+            <button class="slider__preview" type="button">
+              <span class="visually-hidden">Photo 2</span>
+            </button>
+          </li>
+          <li>
+            <button class="slider__preview" type="button">
+              <span class="visually-hidden">Photo 3</span>
+            </button>
+          </li>
+          <li>
+            <button class="slider__preview" type="button">
+              <span class="visually-hidden">Photo 4</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="slider__buttons">
+          <li>
+            <button class="slider__button slider__button--prev" type="button">
+              <span class="visually-hidden">Previous photo</span>
+            </button>
+          </li>
+          <li>
+            <button class="slider__button slider__button--next" type="button">
+              <span class="visually-hidden">Next photo</span>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card__also also">
+        <h2 class="also__title">You may also like</h2>
+        <ul class="also__list">
+          <li class="also__item">
+            <article class="item item--also">
+              <h3 class="item__title"><a class="item__link" href="#">Overalls</a></h3>
+              <p class="item__price">$ 140</p>
+              <p class="item__illustration">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/bestsellers-2-desktop.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/bestsellers-2-tablet.webp">
+                  <source type="image/webp" srcset="img/bestsellers-2-mobile.webp">
+
+                  <source media="(min-width: 1366px)" srcset="img/bestsellers-2-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/bestsellers-2-tablet.jpg">
+                  <img class="item__image" src="img/bestsellers-2-mobile.jpg" alt="Overalls, $ 140.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="also__item">
+            <article class="item item--also">
+              <h3 class="item__title"><a class="item__link" href="#">Overalls</a></h3>
+              <p class="item__price">$ 110</p>
+              <p class="item__illustration">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-10-desktop.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/item-10-tablet.webp">
+                  <source type="image/webp" srcset="img/item-10-mobile.webp">
+
+                  <source media="(min-width: 1366px)" srcset="img/item-10-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/item-10-tablet.jpg">
+                  <img class="item__image" src="img/item-10-mobile.jpg" alt="Overalls, $ 110.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="also__item">
+            <article class="item item--also">
+              <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+              <p class="item__price">$ 70</p>
+              <p class="item__illustration">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-11-desktop.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/item-11-tablet.webp">
+                  <source type="image/webp" srcset="img/item-2-mobile.webp">
+
+                  <source media="(min-width: 1366px)" srcset="img/item-11-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/item-11-tablet.jpg">
+                  <img class="item__image" src="img/item-2-mobile.jpg" alt="Jacket, $ 70.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="also__item">
+            <article class="item item--also">
+              <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+              <p class="item__price">$ 60</p>
+              <p class="item__illustration">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-12-desktop.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/item-12-tablet.webp">
+                  <source type="image/webp" srcset="img/item-3-mobile.webp">
+
+                  <source media="(min-width: 1366px)" srcset="img/item-12-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/item-12-tablet.jpg">
+                  <img class="item__image" src="img/item-3-mobile.jpg" alt="Jacket, $ 60.">
+                </picture>
+              </p>
+            </article>
+          </li>
+        </ul>
+        <a class="also__link" href="#">View all</a>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper wrapper">
+        <a class="page-footer__logo" href="index.html">Nimes</a>
+        <nav class="page-footer__nav secondary-nav" aria-label="More On This Site">
+          <ul class="secondary-nav__list">
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Shop</a>
+            </li>
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Delivery</a>
+            </li>
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Service</a>
+            </li>
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Sitemap</a>
+            </li>
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link" rel="noopener noreferrer" href="https://www.facebook.com" target="_blank">
+              <span class="visually-hidden">Facebook</span>
+              <svg class="social__icon" width="11" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" rel="noopener noreferrer" href="https://www.instagram.com" target="_blank">
+              <span class="visually-hidden">Instagram</span>
+              <svg class="social__icon" width="20" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" rel="noopener noreferrer" href="https://www.pinterest.com" target="_blank">
+              <span class="visually-hidden">Pinterest</span>
+              <svg class="social__icon" width="21" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-pinterest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" rel="noopener noreferrer" href="https://twitter.com" target="_blank">
+              <span class="visually-hidden">Twitter</span>
+              <svg class="social__icon" width="22" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

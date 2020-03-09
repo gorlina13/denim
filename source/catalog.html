@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Denim — Catalog</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper">
+        <a class="page-header__logo" href="index.html">Nimes</a>
+        <nav class="page-header__nav main-nav main-nav--nojs" aria-label="Primary">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Woman</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Man</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">New</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__user-tools">
+          <form class="search" action="#" method="get" role="search">
+            <input class="search__input" type="search" name="search-field" id="search-field" placeholder="Search Denim">
+            <label class="search__label" for="search-field">
+              <span class="visually-hidden">Search Denim</span>
+              <svg class="search__icon" width="16" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </label>
+          </form>
+          <a class="cart" href="#">
+            <span class="visually-hidden">Cart</span>
+            <svg class="cart__icon" width="16" height="16" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="intro">
+        <div class="intro__wrapper wrapper">
+          <h1 class="page-title"> Denim Collection Fall 2019</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">All categories</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Woman</a>
+            </li>
+            <li class="breadcrumbs__item breadcrumbs__item--current">Jackets</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <section class="filter">
+          <div class="filter__inner">
+            <h2 class="filter__title">
+              <button class="filter__open" type="button">Filter by</button>
+            </h2>
+            <form class="filter__form filter-form filter-form--nojs" action="#" method="get" aria-labelledby="filter-form-title">
+              <b class="filter-form__title" id="filter-form-title">Filters</b>
+              <ul class="filter-form__grouping">
+                <li class="filter-form__group">
+                  <h3 class="filter-form__subtitle">
+                    <button class="filter-form__open" type="button">Price</button>
+                  </h3>
+                  <div class="filter-form__range range">
+                    <ul class="range__list">
+                      <li class="range__item">
+                        <label class="range__label">
+                          <span class="visually-hidden">Min:</span>
+                          <input class="range__input" type="text" name="min-price" id="min-price-field" value="$ 40">
+                        </label>
+                      </li>
+                      <li class="range__item">
+                        <label class="range__label">
+                          <span class="visually-hidden">Max:</span>
+                          <input class="range__input" type="text" name="max-price" id="max-price-field" value="$ 240">
+                        </label>
+                      </li>
+                    </ul>
+                    <div class="range__indicator">
+                      <div class="range__scale">
+                        <div class="range__bar"></div>
+                      </div>
+                      <ul class="range__controls">
+                        <li>
+                          <button class="range__control" type="button">
+                            <span class="visually-hidden">Set min price</span>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="range__control" type="button">
+                            <span class="visually-hidden">Set max price</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="filter-form__group">
+                  <h3 class="filter-form__subtitle">
+                    <button class="filter-form__open" type="button">Color</button>
+                  </h3>
+                  <ul class="filter-form__list">
+                    <li class="filter-form__item checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="blue-gray" id="blue-gray-field" value="blue-gray" checked>
+                      <label class="checkbox__label" for="blue-gray-field">
+                        <span class="visually-hidden">blue gray</span>
+                      </label>
+                    </li>
+                    <li class="filter-form__item checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="navy" id="navy-field" value="navy">
+                      <label class="checkbox__label" for="navy-field">
+                        <span class="visually-hidden">navy</span>
+                      </label>
+                    </li>
+                    <li class="filter-form__item checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="gray" id="gray-field" value="gray">
+                      <label class="checkbox__label" for="gray-field">
+                        <span class="visually-hidden">gray</span>
+                      </label>
+                    </li>
+                    <li class="filter-form__item checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="black" id="black-field" value="black">
+                      <label class="checkbox__label" for="black-field">
+                        <span class="visually-hidden">black</span>
+                      </label>
+                    </li>
+                    <li class="filter-form__item checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="light-gray" id="light-gray-field" value="light-gray">
+                      <label class="checkbox__label" for="light-gray-field">
+                        <span class="visually-hidden">light gray</span>
+                      </label>
+                    </li>
+                    <li class="filter-form__item checkbox">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="blue" id="blue-field" value="blue">
+                      <label class="checkbox__label" for="blue-field">
+                        <span class="visually-hidden">blue</span>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filter-form__group">
+                  <h3 class="filter-form__subtitle">
+                    <button class="filter-form__open" type="button">Collection</button>
+                  </h3>
+                  <ul class="filter-form__list">
+                    <li class="filter-form__item radio radio--collection">
+                      <input class="radio__input visually-hidden" type="radio" name="collection" id="casual-field" value="casual">
+                      <label class="radio__label" for="casual-field">Casual</label>
+                    </li>
+                    <li class="filter-form__item radio radio--collection">
+                      <input class="radio__input visually-hidden" type="radio" name="collection" id="petite-field" value="petite">
+                      <label class="radio__label" for="petite-field">Petite</label>
+                    </li>
+                    <li class="filter-form__item radio radio--collection">
+                      <input class="radio__input visually-hidden" type="radio" name="collection" id="classic-field" value="classic" checked>
+                      <label class="radio__label" for="classic-field">Classic</label>
+                    </li>
+                    <li class="filter-form__item radio radio--collection">
+                      <input class="radio__input visually-hidden" type="radio" name="collection" id="soulluxe-field" value="soulluxe">
+                      <label class="radio__label" for="soulluxe-field">Soulluxe</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <button class="filter-form__reset" type="reset">Clear all</button>
+              <button class="filter-form__close" type="button">Close</button>
+              <button class="filter-form__submit button button--filter-form" type="submit">Apply (9 products)</button>
+            </form>
+          </div>
+        </section>
+        <section class="catalog">
+          <h2 class="visually-hidden">Catalog</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 40</p>
+                <p class="item__illustration">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-1-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-1-tablet.webp">
+                    <source type="image/webp" srcset="img/item-1-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-1-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-1-tablet.jpg">
+                    <img class="item__image" src="img/item-1-mobile.jpg" alt="Jacket, $ 40.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 70</p>
+                <p class="item__illustration">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-2-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-2-tablet.webp">
+                    <source type="image/webp" srcset="img/item-2-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-2-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-2-tablet.jpg">
+                    <img class="item__image" src="img/item-2-mobile.jpg" alt="Jacket, $ 70.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 60</p>
+                <p class="item__illustration">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-3-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-3-tablet.webp">
+                    <source type="image/webp" srcset="img/item-3-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-3-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-3-tablet.jpg">
+                    <img class="item__image" src="img/item-3-mobile.jpg" alt="Jacket, $ 60.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 50</p>
+                <p class="item__illustration">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-4-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-4-tablet.webp">
+                    <source type="image/webp" srcset="img/item-4-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-4-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-4-tablet.jpg">
+                    <img class="item__image" src="img/item-4-mobile.jpg" alt="Jacket, $ 50.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="catalog__item catalog__item--large">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 160</p>
+                <p class="item__illustration item__illustration--large">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-5-large-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-5-large-tablet.webp">
+                    <source type="image/webp" srcset="img/item-5-large-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-5-large-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-5-large-tablet.jpg">
+                    <img class="item__image" src="img/item-5-large-mobile.jpg" alt="Jacket, $ 160.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 40</p>
+                <p class="item__illustration">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-6-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-6-tablet.webp">
+                    <source type="image/webp" srcset="img/item-6-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-6-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-6-tablet.jpg">
+                    <img class="item__image" src="img/item-6-mobile.jpg" alt="Jacket, $ 40.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 110</p>
+                <p class="item__illustration">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-7-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-7-tablet.webp">
+                    <source type="image/webp" srcset="img/item-7-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-7-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-7-tablet.jpg">
+                    <img class="item__image" src="img/item-7-mobile.jpg" alt="Jacket, $ 110.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 35</p>
+                <p class="item__illustration">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-8-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-8-tablet.webp">
+                    <source type="image/webp" srcset="img/item-8-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-8-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-8-tablet.jpg">
+                    <img class="item__image" src="img/item-8-mobile.jpg" alt="Jacket, $ 35.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="item item--catalog">
+                <h3 class="item__title"><a class="item__link" href="#">Jacket</a></h3>
+                <p class="item__price">$ 85</p>
+                <p class="item__illustration">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1366px)" srcset="img/item-9-desktop.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/item-9-tablet.webp">
+                    <source type="image/webp" srcset="img/item-9-mobile.webp">
+
+                    <source media="(min-width: 1366px)" srcset="img/item-9-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/item-9-tablet.jpg">
+                    <img class="item__image" src="img/item-9-mobile.jpg" alt="Jacket, $ 85.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+          </ul>
+          <div class="catalog__showing showing">
+            <p class="showing__description">Showing 9 of 45 items</p>
+            <div class="showing__scale">
+              <div class="showing__bar"></div>
+            </div>
+            <a class="showing__button button button--showing" href="#">Load more</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper wrapper">
+        <a class="page-footer__logo logo" href="index.html">Nimes</a>
+        <nav class="page-footer__nav secondary-nav" aria-label="More On This Site">
+          <ul class="secondary-nav__list">
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Shop</a>
+            </li>
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Delivery</a>
+            </li>
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Service</a>
+            </li>
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Sitemap</a>
+            </li>
+            <li class="secondary-nav__item">
+              <a class="secondary-nav__link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link" rel="noopener noreferrer" href="https://www.facebook.com" target="_blank">
+              <span class="visually-hidden">Facebook</span>
+              <svg class="social__icon" width="11" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" rel="noopener noreferrer" href="https://www.instagram.com" target="_blank">
+              <span class="visually-hidden">Instagram</span>
+              <svg class="social__icon" width="20" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" rel="noopener noreferrer" href="https://www.pinterest.com" target="_blank">
+              <span class="visually-hidden">Pinterest</span>
+              <svg class="social__icon" width="21" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-pinterest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" rel="noopener noreferrer" href="https://twitter.com" target="_blank">
+              <span class="visually-hidden">Twitter</span>
+              <svg class="social__icon" width="22" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
