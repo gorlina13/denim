@@ -104,7 +104,7 @@ function webpImages() {
 }
 
 function sprite() {
-  return gulp.src("source/img/for-s-*.svg")
+  return gulp.src("source/img/icon-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
