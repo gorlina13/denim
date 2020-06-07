@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/work-sans-latin-regular.woff2") format("woff2"),
+    url("../fonts/work-sans-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url("../fonts/work-sans-latin-500.woff2") format("woff2"),
+    url("../fonts/work-sans-latin-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/work-sans-latin-700.woff2") format("woff2"),
+    url("../fonts/work-sans-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    url("../fonts/work-sans-latin-800.woff2") format("woff2"),
+    url("../fonts/work-sans-latin-800.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    url("../fonts/work-sans-latin-ext-800.woff2") format("woff2"),
+    url("../fonts/work-sans-latin-ext-800.woff") format("woff");
+  unicode-range: U+00EE;
+}
+
+@font-face {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/anton-latin-regular.woff2") format("woff2"),
+    url("../fonts/anton-latin-regular.woff") format("woff");
+  unicode-range: U+0044, U+0045, U+004E, U+0049, U+004D;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 20rem;
+  margin: 0;
+  padding: 0;
+
+  font-family: $body-font-family;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875;
+  color: $body-color;
+
+  @include break-word();
+
+  background-color: $body-bg-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

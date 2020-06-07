@@ -1,0 +1,14 @@
+@mixin fix-list() {
+  list-style: none;
+
+  & li::before {
+    content: "\200B";
+
+    position: absolute;
+  }
+}
+
+@mixin break-word() {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
