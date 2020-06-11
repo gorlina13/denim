@@ -1,0 +1,35 @@
+.user-tools {
+  flex-shrink: 0;
+  flex-basis: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  width: 33.333%;
+
+  &--index {
+    width: 30%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-tools {
+    &--index {
+      width: 25%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-tools {
+    &--index {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      width: 16.6666%;
+      padding-top: 1.875em;
+    }
+  }
+}

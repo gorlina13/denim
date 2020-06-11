@@ -1,0 +1,138 @@
+.main-nav {
+  position: relative;
+
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: stretch;
+  order: -1;
+
+  width: 33.333%;
+
+  &--index {
+    order: 0;
+
+    width: 70%;
+  }
+
+  &--nojs {
+    order: 3;
+
+    width: 100%;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 3.125em;
+  height: 4.125em;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0.438em;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  width: 1.25em;
+  height: 0.125em;
+  margin: auto;
+
+  background-color: $body-color;
+  box-shadow: 0 -0.313em 0 0 $body-color, 0 0.313em 0 0 $body-color;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before,
+.main-nav--closed .main-nav__toggle:focus::before {
+  background-color: #3b6392;
+  box-shadow: 0 -0.313em 0 0 #3b6392, 0 0.313em 0 0 #3b6392;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 1.938em;
+    bottom: auto;
+    left: 0.75em;
+    right: auto;
+
+    width: 1.688em;
+    height: 0.125em;
+    margin: 0;
+
+    background-color: $body-color;
+    border-radius: 15%;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--opened .main-nav__toggle:hover::before,
+.main-nav--opened .main-nav__toggle:focus::before,
+.main-nav--opened .main-nav__toggle:hover::after,
+.main-nav--opened .main-nav__toggle:focus::after {
+  background-color: #3b6392;
+}
+
+.main-nav__toggle:active {
+  opacity: 0.3;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__list {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    &--index {
+      width: 50%;
+    }
+
+    &--nojs {
+      order: -1;
+
+      width: 33.333%;
+    }
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    &--index {
+      width: 16.6666%;
+      padding-top: 1.75em;
+    }
+  }
+}

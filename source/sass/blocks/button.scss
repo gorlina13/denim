@@ -1,0 +1,33 @@
+.button {
+  display: block;
+  padding: 1.25em 0.75em 1.313em;
+
+  font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: center;
+  text-decoration: none;
+  color: $body-bg-color;
+
+  background-color: $body-color;
+  border: 2px solid transparent;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    @include hover-transition();
+  }
+
+  &--call {
+    width: 12.75em;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--call {
+      width: 13.688em;
+    }
+  }
+}
