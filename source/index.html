@@ -14,46 +14,48 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header page-header--index">
+    <header class="page-header">
       <a class="page-header__logo page-header__logo--index" lang="fr">Nîmes</a>
       <div class="page-header__wrapper page-header__wrapper--index wrapper">
         <nav class="page-header__nav main-nav main-nav--index" aria-label="Primary">
-          <ul class="main-nav__list site-list site-list--index">
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Woman</a>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--index">
+              <a class="site-list__link site-list__link--index" href="catalog.html">Woman</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Man</a>
+            <li class="site-list__item site-list__item--index">
+              <a class="site-list__link site-list__link--index" href="#">Man</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">New</a>
+            <li class="site-list__item site-list__item--index">
+              <a class="site-list__link site-list__link--index" href="#">New</a>
             </li>
           </ul>
         </nav>
-        <div class="page-header__user-tools">
+        <div class="page-header__user-tools page-header__user-tools--index user-tools user-tools--index">
           <form class="search" action="#" method="get" role="search">
             <input class="search__input" type="search" name="search-field" id="search-field" placeholder="Search Denim">
-            <label class="search__label" for="search-field">
+            <label class="search__label search__label--index" for="search-field">
               <span class="visually-hidden">Search Denim</span>
-              <svg class="search__icon" width="16" height="16" aria-hidden="true" focusable="false">
+              <svg class="search__icon" width="18" height="18" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-search"></use>
               </svg>
             </label>
           </form>
-          <a class="cart" href="#">
+          <a class="cart cart--index" href="#">
             <span class="visually-hidden">Cart</span>
-            <svg class="cart__icon" width="16" height="16" aria-hidden="true" focusable="false">
+            <svg class="cart__icon" width="20" height="18" aria-hidden="true" focusable="false">
               <use xlink:href="#icon-cart"></use>
             </svg>
           </a>
         </div>
 
         <div class="page-header__call call">
-          <p class="call__slogan">The quality you deserve</p>
-          <b class="call__name">DENIM</b>
-          <a class="call__button button button--call" href="#">Check new collection</a>
+          <div class="call__inner">
+            <p class="call__slogan">The quality you deserve</p>
+            <p class="call__name">DENIM</p>
+            <a class="call__button button button--call" href="#">Check new collection</a>
+          </div>
         </div>
-        <a class="page-header__skip" href="#main">
+        <a class="page-header__skip skip" href="#main">
           <span class="visually-hidden">To the main content</span>
         </a>
         <ul class="page-header__social spare-social">
@@ -126,7 +128,7 @@
           </li>
           <li class="bestsellers__item">
             <article class="item item--bestsellers">
-              <h3 class="item__title"><a class="item__link" href="#">Overalls</a></h3>
+              <h3 class="item__title"><a class="item__link" href="product-card.html">Overalls</a></h3>
               <p class="item__price">$ 160</p>
               <p class="item__illustration">
                 <picture>
@@ -283,5 +285,7 @@
         </ul>
       </div>
     </footer>
+
+    <script src="js/bundle.js"></script>
   </body>
 </html>
