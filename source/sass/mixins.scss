@@ -12,3 +12,8 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+@mixin hover-transition() {
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
