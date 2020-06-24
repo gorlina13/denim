@@ -16,11 +16,32 @@
 
   &:hover,
   &:focus {
+    color: $body-color;
+
+    background-color: $body-bg-color;
+    border-color: $body-color;
+    box-shadow: 0.3em 0.3em 0 #3b6392;
+
     @include hover-transition();
+  }
+
+  &:active {
+    color: $body-bg-color;
+
+    background-color: $body-color;
+    border-color: transparent;
+    box-shadow: none;
+    opacity: 0.8;
   }
 
   &--call {
     width: 12.75em;
+  }
+
+  &--collection {
+    width: 56.923%;
+    padding-top: 1.063em;
+    padding-bottom: 1.125em;
   }
 }
 
@@ -28,6 +49,20 @@
   .button {
     &--call {
       width: 13.688em;
+    }
+
+    &--collection {
+      width: 48.6842%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--collection {
+      width: 50%;
+      padding-top: 1.25em;
+      padding-bottom: 1.313em;
     }
   }
 }
