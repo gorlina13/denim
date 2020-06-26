@@ -1,0 +1,65 @@
+@media (min-width: $tablet-width) {
+  .intro {
+    background-color: $second-bg-color;
+  }
+
+  .intro__wrapper {
+    display: flex;
+
+    padding: 0 2.813em;
+
+    background-image: repeating-linear-gradient(45deg, $faded-color 0%, rgba($faded-color, 0) 1.5%, rgba($faded-color, 0) 4.5%, $faded-color 4.5%), repeating-linear-gradient(45deg, $faded-color 0%, rgba($faded-color, 0) 1.5%, rgba($faded-color, 0) 4.5%, $faded-color 4.5%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 62.5% 100%, 91.75% 0%;
+    background-size: 23.177% 51.923%, 30.2083% 67.6923%;
+
+    &::after {
+      content: "";
+
+      flex-shrink: 0;
+      flex-basis: auto;
+      align-self: center;
+
+      display: block;
+      width: 43.3628%;
+      height: 0;
+      padding-bottom: 38.348%;
+
+      background-color: #9fbfd6;
+      background-image: url("../img/catalog-lettering-tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+    }
+  }
+
+  .intro__inner {
+    flex-shrink: 0;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 52.2123%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro__wrapper {
+    padding: 0 6.125em;
+
+    background-position: 56.5% 100%, 70% 0%;
+    background-size: 13.0307% 51.923%, 16.9838% 67.6923%;
+
+    &::after {
+      width: 25.5555%;
+      padding-bottom: 22.2222%;
+
+      background-image: url("../img/catalog-lettering-desktop.jpg");
+    }
+  }
+
+  .intro__inner {
+    width: 51.3675%;
+  }
+}

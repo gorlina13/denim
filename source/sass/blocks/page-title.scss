@@ -1,0 +1,50 @@
+.page-title {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media (min-width: $tablet-width) {
+  .page-title {
+    position: static;
+
+    flex-shrink: 0;
+    flex-basis: auto;
+    order: 2;
+
+    width: 75.1412%;
+    height: auto;
+    margin: 0;
+    margin-bottom: 0.5em;
+
+    font-weight: 700;
+    font-size: 1.75em;
+    line-height: 1.179em;
+    white-space: normal;
+
+    clip-path: none;
+    clip: auto;
+    overflow: visible;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-title {
+    width: 53.4109%;
+    margin-left: 33.2778%;
+
+    font-size: 2em;
+    line-height: 1.25;
+  }
+}
