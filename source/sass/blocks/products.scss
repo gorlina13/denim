@@ -62,10 +62,16 @@
   &:hover,
   &:focus {
     background-image: none;
+    box-shadow: 0 0.2em 0 rgba($body-color, 0.8);
+
+    @include hover-transition();
   }
 
   &:active {
-    background-image: linear-gradient(to top, #3b6392 0, rgba(#3b6392, 0) 0.188em);
+    text-shadow: 0 0 1px $body-color;
+
+    background-image: linear-gradient(to top, $jeans-color 0, rgba($jeans-color, 0) 0.188em);
+    box-shadow: none;
   }
 }
 

@@ -54,8 +54,8 @@
 
 .main-nav--closed .main-nav__toggle:hover::before,
 .main-nav--closed .main-nav__toggle:focus::before {
-  background-color: #3b6392;
-  box-shadow: 0 -0.313em 0 0 #3b6392, 0 0.313em 0 0 #3b6392;
+  background-color: $jeans-color;
+  box-shadow: 0 -0.313em 0 0 $jeans-color, 0 0.313em 0 0 $jeans-color;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -91,7 +91,7 @@
 .main-nav--opened .main-nav__toggle:focus::before,
 .main-nav--opened .main-nav__toggle:hover::after,
 .main-nav--opened .main-nav__toggle:focus::after {
-  background-color: #3b6392;
+  background-color: $jeans-color;
 }
 
 .main-nav__toggle:active {

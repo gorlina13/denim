@@ -41,6 +41,20 @@
     &[href] {
       cursor: pointer;
     }
+
+    &[href]:hover,
+    &:focus {
+      text-decoration: underline;
+
+      @include hover-transition();
+    }
+
+    &[href]:active {
+      text-decoration: none;
+      text-shadow: 0 0 1px $body-color;
+
+      opacity: 0.8;
+    }
   }
 }
 

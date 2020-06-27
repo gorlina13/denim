@@ -15,7 +15,24 @@
     background-repeat: no-repeat;
     background-size: 0.75em 2.417em;
     background-position: 50% 50%;
+    border: 2px solid transparent;
 
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: $body-color;
+      background-color: $body-bg-color;
+      box-shadow: 0.3em 0.3em 0 $jeans-color;
+
+      @include hover-transition();
+    }
+
+    &:active {
+      background-color: transparent;
+      box-shadow: none;
+
+      opacity: 0.8;
+    }
   }
 }

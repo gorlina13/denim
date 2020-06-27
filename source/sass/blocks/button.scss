@@ -20,7 +20,7 @@
 
     background-color: $body-bg-color;
     border-color: $body-color;
-    box-shadow: 0.3em 0.3em 0 #3b6392;
+    box-shadow: 0.3em 0.3em 0 $jeans-color;
 
     @include hover-transition();
   }
