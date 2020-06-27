@@ -22,6 +22,20 @@
   &[href] {
     cursor: pointer;
   }
+
+  &[href]:hover,
+  &:focus {
+    text-decoration: underline;
+
+    @include hover-transition();
+  }
+
+  &[href]:active {
+    text-decoration: none;
+    text-shadow: 0 0 1px $body-color;
+
+    opacity: 0.8;
+  }
 }
 
 .page-header__wrapper {
@@ -69,6 +83,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header--index {
+    overflow-x: hidden;
+  }
+
   .page-header__logo {
     &--index {
       max-width: $desktop-width;
@@ -84,6 +102,22 @@
 
       min-height: 38.563em;
       padding-bottom: 0;
+    }
+
+    &--index::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+
+      margin-left: -50vw;
+      margin-right: -50vw;
+
+      background-color: $second-bg-color;
     }
   }
 
