@@ -54,6 +54,15 @@
   padding-left: 0.625em;
 
   vertical-align: top;
+  color: inherit;
+
+  &:hover,
+  .search__input:focus + &,
+  .search:hover &,
+  &:active,
+  .search:active & {
+    color: $jeans-color;
+  }
 }
 
 .search__icon {
@@ -62,9 +71,19 @@
   height: 1.125em;
 
   fill: none;
+  stroke: currentColor;
 }
 
 @media (min-width: $tablet-width) {
+  .search__input {
+    right: 100%;
+    bottom: 0;
+    top: auto;
+
+    width: 18em;
+    height: 4em;
+  }
+
   .search__label {
     padding-top: 1.5em;
     padding-right: 1.25em;
@@ -79,8 +98,11 @@
 
 @media (min-width: $desktop-width) {
   .search__input {
+    right: 0;
+    bottom: auto;
+    top: 100%;
+
     width: 20em;
-    height: 4em;
   }
 
   .search__label {
