@@ -75,125 +75,130 @@
       </div>
 
       <div class="wrapper">
-        <section class="filter">
-          <div class="filter__inner">
-            <h2 class="filter__title">
-              <button class="filter__open" type="button">Filter by</button>
-            </h2>
-            <form class="filter__form filter-form filter-form--nojs" action="#" method="get" aria-labelledby="filter-form-title">
-              <b class="filter-form__title" id="filter-form-title">Filters</b>
-              <ul class="filter-form__grouping">
-                <li class="filter-form__group">
-                  <h3 class="filter-form__subtitle">
-                    <button class="filter-form__open" type="button">Price</button>
-                  </h3>
-                  <div class="filter-form__range range">
-                    <ul class="range__list">
-                      <li class="range__item">
-                        <label class="range__label">
-                          <span class="visually-hidden">Min:</span>
-                          <input class="range__input" type="text" name="min-price" id="min-price-field" value="$ 40">
-                        </label>
+        <section class="filter filter--nojs">
+          <h2 class="filter__title">
+            <!-- This span will be replaced with a button programmatically. -->
+            <span class="filter__toggle">Filter by</span>
+          </h2>
+          <form class="filter__form filter-form" action="#" method="get" aria-labelledby="filter-form-title">
+            <b class="filter-form__title" id="filter-form-title">Filters</b>
+            <ul class="filter-form__grouping">
+              <li class="filter-form__group">
+                <h3 class="filter-form__subtitle">
+                  <!-- This span will be replaced with a button programmatically. -->
+                  <span class="filter-form__toggle">Price</span>
+                </h3>
+                <div class="filter-form__range range">
+                  <ul class="range__list">
+                    <li class="range__item">
+                      <label class="range__label">
+                        <span class="visually-hidden">Min:</span>
+                        <span class="range__dollar">$ </span>
+                        <input class="range__input" type="text" name="min-price" id="min-price-field" value="40">
+                      </label>
+                    </li>
+                    <li class="range__item">
+                      <label class="range__label">
+                        <span class="visually-hidden">Max:</span>
+                        <span class="range__dollar">$ </span>
+                        <input class="range__input" type="text" name="max-price" id="max-price-field" value="240">
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="range__indicator">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
+                    </div>
+                    <ul class="range__controls">
+                      <li>
+                        <button class="range__control range__control--min" type="button">
+                          <span class="visually-hidden">Set min price</span>
+                        </button>
                       </li>
-                      <li class="range__item">
-                        <label class="range__label">
-                          <span class="visually-hidden">Max:</span>
-                          <input class="range__input" type="text" name="max-price" id="max-price-field" value="$ 240">
-                        </label>
+                      <li>
+                        <button class="range__control range__control--max" type="button">
+                          <span class="visually-hidden">Set max price</span>
+                        </button>
                       </li>
                     </ul>
-                    <div class="range__indicator">
-                      <div class="range__scale">
-                        <div class="range__bar"></div>
-                      </div>
-                      <ul class="range__controls">
-                        <li>
-                          <button class="range__control" type="button">
-                            <span class="visually-hidden">Set min price</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="range__control" type="button">
-                            <span class="visually-hidden">Set max price</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
-                </li>
-                <li class="filter-form__group">
-                  <h3 class="filter-form__subtitle">
-                    <button class="filter-form__open" type="button">Color</button>
-                  </h3>
-                  <ul class="filter-form__list">
-                    <li class="filter-form__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="blue-gray" id="blue-gray-field" value="blue-gray" checked>
-                      <label class="checkbox__label" for="blue-gray-field">
-                        <span class="visually-hidden">blue gray</span>
-                      </label>
-                    </li>
-                    <li class="filter-form__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="navy" id="navy-field" value="navy">
-                      <label class="checkbox__label" for="navy-field">
-                        <span class="visually-hidden">navy</span>
-                      </label>
-                    </li>
-                    <li class="filter-form__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="gray" id="gray-field" value="gray">
-                      <label class="checkbox__label" for="gray-field">
-                        <span class="visually-hidden">gray</span>
-                      </label>
-                    </li>
-                    <li class="filter-form__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="black" id="black-field" value="black">
-                      <label class="checkbox__label" for="black-field">
-                        <span class="visually-hidden">black</span>
-                      </label>
-                    </li>
-                    <li class="filter-form__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="light-gray" id="light-gray-field" value="light-gray">
-                      <label class="checkbox__label" for="light-gray-field">
-                        <span class="visually-hidden">light gray</span>
-                      </label>
-                    </li>
-                    <li class="filter-form__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="blue" id="blue-field" value="blue">
-                      <label class="checkbox__label" for="blue-field">
-                        <span class="visually-hidden">blue</span>
-                      </label>
-                    </li>
-                  </ul>
-                </li>
-                <li class="filter-form__group">
-                  <h3 class="filter-form__subtitle">
-                    <button class="filter-form__open" type="button">Collection</button>
-                  </h3>
-                  <ul class="filter-form__list">
-                    <li class="filter-form__item radio radio--collection">
-                      <input class="radio__input visually-hidden" type="radio" name="collection" id="casual-field" value="casual">
-                      <label class="radio__label" for="casual-field">Casual</label>
-                    </li>
-                    <li class="filter-form__item radio radio--collection">
-                      <input class="radio__input visually-hidden" type="radio" name="collection" id="petite-field" value="petite">
-                      <label class="radio__label" for="petite-field">Petite</label>
-                    </li>
-                    <li class="filter-form__item radio radio--collection">
-                      <input class="radio__input visually-hidden" type="radio" name="collection" id="classic-field" value="classic" checked>
-                      <label class="radio__label" for="classic-field">Classic</label>
-                    </li>
-                    <li class="filter-form__item radio radio--collection">
-                      <input class="radio__input visually-hidden" type="radio" name="collection" id="soulluxe-field" value="soulluxe">
-                      <label class="radio__label" for="soulluxe-field">Soulluxe</label>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <button class="filter-form__reset" type="reset">Clear all</button>
-              <button class="filter-form__close" type="button">Close</button>
-              <button class="filter-form__submit button button--filter-form" type="submit">Apply (9 products)</button>
-            </form>
-          </div>
+                </div>
+              </li>
+              <li class="filter-form__group">
+                <h3 class="filter-form__subtitle">
+                  <!-- This span will be replaced with a button programmatically. -->
+                  <span class="filter-form__toggle">Color</span>
+                </h3>
+                <ul class="filter-form__list">
+                  <li class="filter-form__item checkbox">
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="blue-gray" id="blue-gray-field" value="blue-gray" checked>
+                    <label class="checkbox__label" for="blue-gray-field">
+                      <span class="visually-hidden">blue gray</span>
+                    </label>
+                  </li>
+                  <li class="filter-form__item checkbox">
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="navy" id="navy-field" value="navy">
+                    <label class="checkbox__label" for="navy-field">
+                      <span class="visually-hidden">navy</span>
+                    </label>
+                  </li>
+                  <li class="filter-form__item checkbox">
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="gray" id="gray-field" value="gray">
+                    <label class="checkbox__label" for="gray-field">
+                      <span class="visually-hidden">gray</span>
+                    </label>
+                  </li>
+                  <li class="filter-form__item checkbox">
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="coal" id="coal-field" value="coal">
+                    <label class="checkbox__label" for="coal-field">
+                      <span class="visually-hidden">coal</span>
+                    </label>
+                  </li>
+                  <li class="filter-form__item checkbox">
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="light-gray" id="light-gray-field" value="light-gray">
+                    <label class="checkbox__label" for="light-gray-field">
+                      <span class="visually-hidden">light gray</span>
+                    </label>
+                  </li>
+                  <li class="filter-form__item checkbox">
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="blue" id="blue-field" value="blue">
+                    <label class="checkbox__label" for="blue-field">
+                      <span class="visually-hidden">blue</span>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+              <li class="filter-form__group">
+                <h3 class="filter-form__subtitle">
+                  <!-- This span will be replaced with a button programmatically. -->
+                  <span class="filter-form__toggle">Collection</span>
+                </h3>
+                <ul class="filter-form__list">
+                  <li class="filter-form__item radio radio--collection">
+                    <input class="radio__input visually-hidden" type="radio" name="collection" id="casual-field" value="casual">
+                    <label class="radio__label" for="casual-field">Casual</label>
+                  </li>
+                  <li class="filter-form__item radio radio--collection">
+                    <input class="radio__input visually-hidden" type="radio" name="collection" id="petite-field" value="petite">
+                    <label class="radio__label" for="petite-field">Petite</label>
+                  </li>
+                  <li class="filter-form__item radio radio--collection">
+                    <input class="radio__input visually-hidden" type="radio" name="collection" id="classic-field" value="classic" checked>
+                    <label class="radio__label" for="classic-field">Classic</label>
+                  </li>
+                  <li class="filter-form__item radio radio--collection">
+                    <input class="radio__input visually-hidden" type="radio" name="collection" id="soulluxe-field" value="soulluxe">
+                    <label class="radio__label" for="soulluxe-field">Soulluxe</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <button class="filter-form__reset" type="reset">Clear all</button>
+            <button class="filter-form__close" type="button">Close</button>
+            <button class="filter-form__submit button button--filter-form" type="submit">Apply (9 products)</button>
+          </form>
         </section>
+
         <section class="catalog">
           <h2 class="visually-hidden">Catalog</h2>
           <ul class="catalog__list">
