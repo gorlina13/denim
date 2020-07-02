@@ -1,7 +1,9 @@
 import 'picturefill';
+import 'element-closest-polyfill';
 import Nav from './modules/nav';
+import Filter from './modules/filter';
 
-function makeNav() {
+function manageNav() {
   const navElem = document.querySelector(`.main-nav`);
   const navToggle = document.querySelector(`.main-nav__toggle`);
   const innerPage = !navElem.classList.contains(`main-nav--index`);
@@ -12,8 +14,18 @@ function makeNav() {
   }
 }
 
+function manageFilter() {
+  const filterElem = document.querySelector(`.filter`);
+
+  if (filterElem !== null) {
+    const filter = new Filter(filterElem);
+    filter.setup();
+  }
+}
+
 function work() {
-  makeNav();
+  manageNav();
+  manageFilter();
 }
 
 if (document.readyState === `loading`) {
