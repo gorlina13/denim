@@ -27,10 +27,10 @@
 
   .spare-social__link {
     display: block;
-    padding-top: 37px;
-    padding-right: 20px;
-    padding-bottom: 24px;
-    padding-left: 15px;
+    padding-top: 2.643em;
+    padding-right: 1.071em;
+    padding-bottom: 1.714em;
+    padding-left: 1.429em;
 
     font-size: 0.875em;
     line-height: 1.143em;
@@ -51,18 +51,27 @@
 
     &[href]:active {
       text-decoration: none;
-      text-shadow: 0 0 1px $body-color;
+      text-shadow: 0 0 0.063em $body-color;
 
       opacity: 0.8;
+    }
+  }
+
+  @supports (display: grid) {
+    .spare-social {
+      grid-area: social;
+
+      width: auto;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .spare-social {
+    align-self: flex-end;
     flex-direction: column-reverse;
     align-items: flex-end;
-    width: 16.6666%;
+    width: 10%;
   }
 
   .spare-social__item {
@@ -74,9 +83,17 @@
 
   .spare-social__link {
     display: inline-block;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 1.071em;
+    padding-bottom: 1.071em;
 
     vertical-align: top;
+  }
+
+  @supports (display: grid) {
+    .spare-social {
+      align-self: end;
+
+      width: auto;
+    }
   }
 }

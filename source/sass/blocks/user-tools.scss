@@ -7,29 +7,39 @@
   align-items: flex-start;
 
   width: 33.333%;
-
-  &--index {
-    width: 30%;
-  }
 }
 
 @media (min-width: $tablet-width) {
   .user-tools {
-    &--index {
-      width: 25%;
+    width: 25%;
+  }
+
+  @supports (display: grid) {
+    .user-tools--index {
+      grid-area: tools;
+      justify-self: end;
+
+      width: 50%;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .user-tools {
-    &--index {
-      flex-direction: column-reverse;
-      justify-content: flex-start;
-      align-items: flex-end;
+  .user-tools--index {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
 
-      width: 16.6666%;
-      padding-top: 1.875em;
+    width: 10%;
+    padding-top: 1.875em;
+  }
+
+  @supports (display: grid) {
+    .user-tools--index {
+      justify-self: stretch;
+      align-self: start;
+
+      width: auto;
     }
   }
 }

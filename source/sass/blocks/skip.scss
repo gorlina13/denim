@@ -8,14 +8,14 @@
     flex-basis: auto;
 
     display: block;
-    width: 2.75em;
-    height: 4.417em;
+    width: 2.625em;
+    height: 4.25em;
 
     background-image: url("../img/arrow-to-skip.svg");
     background-repeat: no-repeat;
     background-size: 0.75em 2.417em;
     background-position: 50% 50%;
-    border: 2px solid transparent;
+    border: 0.125em solid transparent;
 
     cursor: pointer;
 
@@ -33,6 +33,26 @@
       box-shadow: none;
 
       opacity: 0.8;
+    }
+  }
+
+  @supports (display: grid) {
+    .skip {
+      grid-area: skip;
+      justify-self: start;
+      align-self: start;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .skip {
+    align-self: flex-end;
+  }
+
+  @supports (display: grid) {
+    .skip {
+      align-self: end;
     }
   }
 }

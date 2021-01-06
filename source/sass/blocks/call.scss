@@ -54,23 +54,22 @@
 
     display: flex;
 
-    min-height: 19.938em;
-    padding-bottom: 0;
+    min-height: 21.813em;
+    padding: 0;
 
     &::before {
       position: absolute;
-      left: 75%;
-      bottom: -1.875em;
+      left: 50%;
+      bottom: 0;
       top: -1.875em;
 
       width: 20.25em;
       height: auto;
       margin: 0;
+      margin-left: 0.938em;
 
       background-image: url("../img/hero-tablet.jpg"), repeating-linear-gradient(45deg, $faded-color 0%, transparent 1.5%, transparent 4.5%, $faded-color 4.5%), repeating-linear-gradient(135deg, $faded-color 0%, transparent 1.5%, transparent 4.5%, $faded-color 4.5%);
       background-size: 16.5em 19.938em, 8.813em 6.5em, 8.813em 6.5em;
-
-      transform: translateX(-51%);
     }
   }
 
@@ -80,31 +79,51 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-end;
 
     width: 50%;
-    min-height: 19.938em;
-    padding-left: 3.75em;
+    min-height: 21.813em; // for IE11
+    padding: 0 0.938em;
+    padding-bottom: 1.875em;
   }
 
-  .call__slogan {
+  .call__text {
     flex-shrink: 0;
     flex-basis: auto;
+
+    max-width: 18.375em;
   }
 
   .call__name {
-    flex-shrink: 0;
-    flex-basis: auto;
-
     margin-top: -0.092em;
     margin-bottom: 0.276em;
+    padding: 0 0.071em;
 
     font-size: 6.125em;
     line-height: 1.469em;
   }
 
-  .call__button {
-    flex-shrink: 0;
-    flex-basis: auto;
+  @supports (display: grid) {
+    .call {
+      position: static;
+
+      grid-area: call;
+
+      width: auto;
+      min-height: 23.688em;
+
+      &::before {
+        position: static;
+
+        flex-shrink: 0;
+        flex-basis: auto;
+        order: 2;
+      }
+    }
+
+    .call__inner {
+      min-height: 0;
+    }
   }
 }
 
@@ -112,48 +131,64 @@
   .call {
     position: static;
 
-    align-items: flex-start;
-
     min-height: 0;
-    padding: 0;
+    margin-bottom: 1.125em;
 
     text-align: left;
 
     &::before {
-      left: 45.2415%;
-      bottom: 0;
       top: 0;
 
       width: 33.125em;
+      margin-left: -4.063em;
 
       background-image: url("../img/hero-desktop.jpg"), repeating-linear-gradient(45deg, $faded-color 0%, transparent 1.5%, transparent 4.5%, $faded-color 4.5%), repeating-linear-gradient(135deg, $faded-color 0%, transparent 1.5%, transparent 4.5%, $faded-color 4.5%);
       background-size: 26.875em 32.313em, 14.5em 11em, 14.5em 11em;
-
-      transform: translateX(0);
     }
   }
 
   .call__inner {
-    display: block;
-    width: 28%;
+    width: 31.666%;
     min-height: 0;
-    margin-left: 15.2892%;
-    padding: 0;
-    padding-top: 1.375em;
+    margin-left: 10%;
+    padding-top: 1.313em;
   }
 
-  .call__slogan {
-    padding-left: 0.278em;
+  .call__text {
+    max-width: 100%;
   }
 
   .call__name {
     margin-top: -0.156em;
     margin-bottom: 0.047em;
+    padding: 0;
 
     font-size: 8em;
   }
 
   .call__button {
     margin: 0;
+  }
+
+  @supports (display: grid) {
+    .call {
+      margin-bottom: 0;
+
+      &::before {
+        height: 38.563em;
+        margin-left: 2.188em;
+      }
+    }
+
+    .call__inner {
+      justify-content: center;
+
+      width: 39.583%;
+      margin-left: 0;
+    }
+
+    .call__text {
+      margin-top: 1.5em;
+    }
   }
 }

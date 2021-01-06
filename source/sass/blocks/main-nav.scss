@@ -11,7 +11,7 @@
   &--index {
     order: 0;
 
-    width: 70%;
+    width: 66.666%;
   }
 
   &--nojs {
@@ -108,14 +108,16 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
+    width: 40%;
+
     &--index {
-      width: 50%;
+      width: 40%;
     }
 
     &--nojs {
       order: -1;
 
-      width: 33.333%;
+      width: 40%;
     }
   }
 
@@ -123,16 +125,28 @@
     display: none;
   }
 
-  .main-nav--nojs .main-nav__list {
-    display: flex;
+  @supports (display: grid) {
+    .main-nav--index {
+      grid-area: nav;
+      justify-self: start;
+
+      width: 80%;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav {
-    &--index {
-      width: 16.6666%;
-      padding-top: 1.75em;
+  .main-nav--index {
+    width: 10%;
+    padding-top: 1.75em;
+  }
+
+  @supports (display: grid) {
+    .main-nav--index {
+      justify-self: stretch;
+      align-self: start;
+
+      width: auto;
     }
   }
 }
