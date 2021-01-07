@@ -1,9 +1,9 @@
-.spare-social {
+.aux-socials {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
-  .spare-social {
+  .aux-socials {
     flex-shrink: 0;
     flex-basis: auto;
     display: flex;
@@ -17,7 +17,7 @@
     @include fix-list();
   }
 
-  .spare-social__item {
+  .aux-socials__item {
     flex-shrink: 0;
     flex-basis: auto;
 
@@ -25,7 +25,7 @@
     max-width: 33.3333%;
   }
 
-  .spare-social__link {
+  .aux-socials__link {
     display: block;
     padding-top: 2.643em;
     padding-right: 1.071em;
@@ -58,8 +58,8 @@
   }
 
   @supports (display: grid) {
-    .spare-social {
-      grid-area: social;
+    .aux-socials {
+      grid-area: socials;
 
       width: auto;
     }
@@ -67,21 +67,21 @@
 }
 
 @media (min-width: $desktop-width) {
-  .spare-social {
+  .aux-socials {
     align-self: flex-end;
     flex-direction: column-reverse;
     align-items: flex-end;
     width: 10%;
   }
 
-  .spare-social__item {
+  .aux-socials__item {
     width: 100%;
     max-width: 100%;
 
     text-align: right;
   }
 
-  .spare-social__link {
+  .aux-socials__link {
     display: inline-block;
     padding-top: 1.071em;
     padding-bottom: 1.071em;
@@ -90,7 +90,7 @@
   }
 
   @supports (display: grid) {
-    .spare-social {
+    .aux-socials {
       align-self: end;
 
       width: auto;

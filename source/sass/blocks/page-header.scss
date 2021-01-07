@@ -100,7 +100,7 @@
     margin-right: auto;
   }
 
-  .page-header__social {
+  .page-header__socials {
     margin: 0;
     margin-left: auto;
   }
@@ -108,8 +108,8 @@
   @supports (display: grid) {
     .page-header__wrapper--index {
       display: grid;
-      grid-template-columns: [nav-start call-start skip-start] minmax(0, 1fr) [nav-end skip-end tools-start social-start] minmax(0, 1fr) [call-end tools-end social-end];
-      grid-template-rows: [nav-start tools-start] min-content [call-start] 1.875em [nav-end tools-end] minmax(21.813em, auto) [call-end skip-start social-start] min-content [skip-end social-end];
+      grid-template-columns: [nav-start call-start skip-start] minmax(0, 1fr) [nav-end skip-end tools-start socials-start] minmax(0, 1fr) [call-end tools-end socials-end];
+      grid-template-rows: [nav-start tools-start] min-content [call-start] 1.875em [nav-end tools-end] minmax(21.813em, auto) [call-end skip-start socials-start] min-content [skip-end socials-end];
     }
 
     .page-header__user-tools--index {
@@ -120,7 +120,7 @@
       margin: 0;
     }
 
-    .page-header__social {
+    .page-header__socials {
       margin: 0;
     }
   }
@@ -138,7 +138,7 @@
     margin-bottom: 1.813em;
   }
 
-  .page-header__social {
+  .page-header__socials {
     margin-bottom: 1.813em;
   }
 
@@ -146,8 +146,8 @@
     .page-header__wrapper--index {
       position: static;
 
-      grid-template-columns: [nav-start skip-start] minmax(0, 1fr) [nav-end skip-end call-start] minmax(0, 8fr) [call-end tools-start social-start] minmax(0, 1fr) [tools-end social-end];
-      grid-template-rows: [nav-start call-start tools-start] auto [nav-end tools-end skip-start social-start] auto [call-end skip-end social-end];
+      grid-template-columns: [nav-start skip-start] minmax(0, 1fr) [nav-end skip-end call-start] minmax(0, 8fr) [call-end tools-start socials-start] minmax(0, 1fr) [tools-end socials-end];
+      grid-template-rows: [nav-start call-start tools-start] auto [nav-end tools-end skip-start socials-start] auto [call-end skip-end socials-end];
 
       min-height: 0;
     }

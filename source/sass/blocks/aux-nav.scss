@@ -1,11 +1,11 @@
-.secondary-nav {
+.aux-nav {
   flex-shrink: 0;
   flex-basis: auto;
 
   width: 100%;
 }
 
-.secondary-nav__list {
+.aux-nav__list {
   display: flex;
   flex-wrap: wrap;
 
@@ -15,7 +15,7 @@
   @include fix-list();
 }
 
-.secondary-nav__item {
+.aux-nav__item {
   flex-shrink: 0;
   flex-basis: auto;
 
@@ -48,7 +48,7 @@
   }
 }
 
-.secondary-nav__link {
+.aux-nav__link {
   display: inline-block;
   padding: 0.778em 0.833em 0.444em;
 
@@ -78,11 +78,11 @@
 }
 
 @media (min-width: $tablet-width) {
-  .secondary-nav__list {
+  .aux-nav__list {
     justify-content: center;
   }
 
-  .secondary-nav__item {
+  .aux-nav__item {
     width: auto;
 
     &--sitemap {
@@ -112,7 +112,7 @@
     }
   }
 
-  .secondary-nav__link {
+  .aux-nav__link {
     max-width: 7.333em;
     padding-left: 1em;
     padding-right: 1em;

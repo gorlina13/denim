@@ -1,4 +1,4 @@
-.social {
+.socials {
   flex-shrink: 0;
   flex-basis: auto;
   display: flex;
@@ -11,12 +11,12 @@
   @include fix-list();
 }
 
-.social__item {
+.socials__item {
   flex-shrink: 0;
   flex-basis: auto;
 }
 
-.social__link {
+.socials__link {
   display: block;
   width: 3.375em;
   height: 2.5em;
@@ -45,7 +45,7 @@
   }
 }
 
-.social__icon {
+.socials__icon {
   display: inline-block;
 
   vertical-align: top;
@@ -74,21 +74,21 @@
 }
 
 @media (min-width: $tablet-width) {
-  .social {
+  .socials {
     justify-content: center;
   }
 
-  .social__item {
+  .socials__item {
     margin: 0 0.125em;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .social__item {
+  .socials__item {
     margin: 0;
   }
 
-  .social__link {
+  .socials__link {
     padding-left: 0.938em;
     padding-right: 0.938em;
   }
