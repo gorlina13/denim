@@ -1,4 +1,6 @@
 .item {
+  position: relative;
+
   flex-shrink: 0;
   flex-basis: auto;
   display: flex;
@@ -40,6 +42,17 @@
 
     opacity: 0.8;
   }
+
+  &[href]::after {
+    content: "";
+
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .item__price {
@@ -47,6 +60,7 @@
   flex-basis: auto;
 
   margin: 0;
+  margin-top: auto;
 
   font-weight: 700;
   font-size: 0.875em;
@@ -60,21 +74,49 @@
   flex-basis: auto;
   order: -1;
 
+  width: 100%;
   height: 0;
   margin: 0;
   margin-bottom: 0.688em;
   padding-bottom: 123.0769%;
 
-  &--short {
-    padding-bottom: 96.923%;
-  }
-
-  &--negative-mt {
+  &--negative-mt,
+  .products__item--categories:nth-child(4n) & {
     margin-top: -26.1538%;
   }
 
-  &--large {
+  &--short,
+  .products__item--categories:nth-child(4n+2) &,
+  .products__item--categories:nth-child(4n+3) & {
+    padding-bottom: 96.923%;
+  }
+
+  &--large,
+  .products__item--catalog:nth-child(9n+5) &,
+  .products__item--large & {
     padding-bottom: 152.4137%;
+  }
+}
+
+@supports (aspect-ratio: 13 / 16) {
+  .item__illustration {
+    height: auto;
+    padding-bottom: 0;
+    aspect-ratio: 13 / 16;
+
+    &--short,
+    .products__item--categories:nth-child(4n+2) &,
+    .products__item--categories:nth-child(4n+3) & {
+      padding-bottom: 0;
+      aspect-ratio: 65 / 63;
+    }
+
+    &--large,
+    .products__item--catalog:nth-child(9n+5) &,
+    .products__item--large & {
+      padding-bottom: 0;
+      aspect-ratio: 145 / 221;
+    }
   }
 }
 
@@ -85,6 +127,8 @@
 
   width: 100%;
   height: 100%;
+
+  object-fit: cover;
 }
 
 @media (min-width: $tablet-width) {
@@ -104,20 +148,51 @@
     margin-bottom: 1.25em;
     padding-bottom: 107.716%;
 
-    &--short {
-      padding-bottom: 89.5061%;
-    }
-
-    &--negative-mt {
+    &--negative-mt,
+    .products__item--categories:nth-child(4n) & {
       margin-top: -18.2098%;
     }
 
-    &--large {
-      padding-bottom: 152.4137%;
+    &--short,
+    .products__item--categories:nth-child(4n+2) &,
+    .products__item--categories:nth-child(4n+3) & {
+      padding-bottom: 89.5061%;
     }
 
-    &--small {
+    &--catalog {
       padding-bottom: 135.4368%;
+    }
+
+    &--large,
+    .products__item--catalog:nth-child(9n+5) &,
+    .products__item--large & {
+      padding-bottom: 152.0362%;
+    }
+  }
+
+  @supports (aspect-ratio: 324 / 349) {
+    .item__illustration {
+      padding-bottom: 0;
+      aspect-ratio: 324 / 349;
+
+      &--short,
+      .products__item--categories:nth-child(4n+2) &,
+      .products__item--categories:nth-child(4n+3) & {
+        padding-bottom: 0;
+        aspect-ratio: 162 / 145;
+      }
+
+      &--catalog {
+        padding-bottom: 0;
+        aspect-ratio: 206 / 279;
+      }
+
+      &--large,
+      .products__item--catalog:nth-child(9n+5) &,
+      .products__item--large & {
+        padding-bottom: 0;
+        aspect-ratio: 221 / 336;
+      }
     }
   }
 }
@@ -126,20 +201,51 @@
   .item__illustration {
     padding-bottom: 129.2592%;
 
-    &--short {
-      padding-bottom: 107.4074%;
-    }
-
-    &--negative-mt {
+    &--negative-mt,
+    .products__item--categories:nth-child(4n) & {
       margin-top: 0;
     }
 
-    &--large {
-      padding-bottom: 121.3768%;
+    &--short,
+    .products__item--categories:nth-child(4n+2) &,
+    .products__item--categories:nth-child(4n+3) & {
+      padding-bottom: 107.4074%;
     }
 
-    &--small {
+    &--catalog {
       padding-bottom: 111.1111%;
+    }
+
+    &--large,
+    .products__item--catalog:nth-child(9n+5) &,
+    .products__item--large & {
+      padding-bottom: 121.3768%;
+    }
+  }
+
+  @supports (aspect-ratio: 270 / 349) {
+    .item__illustration {
+      padding-bottom: 0;
+      aspect-ratio: 270 / 349;
+
+      &--short,
+      .products__item--categories:nth-child(4n+2) &,
+      .products__item--categories:nth-child(4n+3) & {
+        padding-bottom: 0;
+        aspect-ratio: 27 / 29;
+      }
+
+      &--catalog {
+        padding-bottom: 0;
+        aspect-ratio: 9 / 10;
+      }
+
+      &--large,
+      .products__item--catalog:nth-child(9n+5) &,
+      .products__item--large & {
+        padding-bottom: 0;
+        aspect-ratio: 276 / 335;
+      }
     }
   }
 }
