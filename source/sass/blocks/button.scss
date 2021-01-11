@@ -10,7 +10,7 @@
   color: $body-bg-color;
 
   background-color: $body-color;
-  border: 2px solid transparent;
+  border: 0.125em solid transparent;
 
   cursor: pointer;
 
@@ -39,7 +39,11 @@
   }
 
   &--collection {
-    width: 56.923%;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: center;
+
+    width: 51.034%;
     padding-top: 1.063em;
     padding-bottom: 1.125em;
   }
@@ -52,7 +56,9 @@
     }
 
     &--collection {
-      width: 48.6842%;
+      align-self: flex-start;
+
+      width: 58.2677%;
     }
   }
 }
@@ -60,7 +66,7 @@
 @media (min-width: $desktop-width) {
   .button {
     &--collection {
-      width: 50%;
+      width: 12.5em;
       padding-top: 1.25em;
       padding-bottom: 1.313em;
     }
