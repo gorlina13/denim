@@ -153,9 +153,22 @@
 
       <section class="collection">
         <div class="collection__inner">
-          <h2 class="collection__title">Fall 2019</h2>
-          <p class="collection__description">Street fashion collection</p>
-          <a class="collection__button button button--collection" href="#">Shop now</a>
+          <div class="collection__text">
+            <h2 class="collection__title">Fall 2019</h2>
+            <p class="collection__description">Street fashion collection</p>
+            <a class="collection__button button button--collection" href="#">Shop now</a>
+          </div>
+        </div>
+        <div class="collection__illustration">
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/collection-desktop.webp">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/collection-tablet.webp">
+            <source type="image/webp" srcset="img/collection-mobile.webp">
+
+            <source media="(min-width: 1366px)" srcset="img/collection-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/collection-tablet.jpg">
+            <img class="collection__image" src="img/collection-mobile.jpg" alt="A girl and a young man on the street.">
+          </picture>
         </div>
       </section>
 
