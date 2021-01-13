@@ -47,6 +47,10 @@
     padding-top: 1.063em;
     padding-bottom: 1.125em;
   }
+
+  &--products {
+    width: 61.034%;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -60,6 +64,10 @@
 
       width: 58.2677%;
     }
+
+    &--products {
+      width: calc(33.333% - 1.875em);
+    }
   }
 }
 
@@ -69,6 +77,10 @@
       width: 12.5em;
       padding-top: 1.25em;
       padding-bottom: 1.313em;
+    }
+
+    &--products {
+      width: 12.5em;
     }
   }
 }
