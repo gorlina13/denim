@@ -114,6 +114,10 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.wrapper {
+  @include wrapper-padding();
+}
+
 @media (min-width: $desktop-width) {
   .wrapper {
     max-width: 78.75rem;

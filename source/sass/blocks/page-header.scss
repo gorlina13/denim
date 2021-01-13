@@ -7,8 +7,6 @@
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
-
-  @include wrapper-padding();
 }
 
 .page-header__logo {
