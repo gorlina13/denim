@@ -78,6 +78,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .aux-nav {
+    padding: 0 0.938em;
+  }
+
   .aux-nav__list {
     justify-content: center;
   }

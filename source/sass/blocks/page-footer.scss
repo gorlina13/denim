@@ -15,7 +15,7 @@
 
 .page-footer__logo {
   position: relative;
-  z-index: 5;
+  z-index: 15;
 
   flex-shrink: 0;
   flex-basis: auto;
@@ -59,13 +59,13 @@
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
     display: block;
-    padding: 0 2.813em;
   }
 
   .page-footer__logo {
     position: static;
 
-    width: auto;
+    width: 20%;
+    max-width: 20%;
     margin: 0 auto;
     margin-bottom: 0.333em;
 
@@ -74,10 +74,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-footer__wrapper {
-    padding: 0 6.125em;
-  }
-
   .page-footer__logo {
     margin-bottom: 0.125em;
   }
