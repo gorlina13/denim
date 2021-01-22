@@ -69,30 +69,30 @@ const checkKey = (evt, keyString) => {
   return сheck || extraCheck;
 };
 
-const TAB = (evt) => checkKey(evt, `Tab`);
-const ESCAPE = (evt) => checkKey(evt, `Escape`);
-const SPACE = (evt) => checkKey(evt, ` `);
-const ENTER = (evt) => checkKey(evt, `Enter`);
-const ARROW_RIGHT = (evt) => checkKey(evt, `ArrowRight`);
-const ARROW_LEFT = (evt) => checkKey(evt, `ArrowLeft`);
-const ARROW_DOWN = (evt) => checkKey(evt, `ArrowDown`);
-const ARROW_UP = (evt) => checkKey(evt, `ArrowUp`);
-const PAGE_UP = (evt) => checkKey(evt, `PageUp`);
-const PAGE_DOWN = (evt) => checkKey(evt, `PageDown`);
-const END = (evt) => checkKey(evt, `End`);
-const HOME = (evt) => checkKey(evt, `Home`);
+const tab = (evt) => checkKey(evt, `Tab`);
+const escape = (evt) => checkKey(evt, `Escape`);
+const space = (evt) => checkKey(evt, ` `);
+const enter = (evt) => checkKey(evt, `Enter`);
+const arrowRight = (evt) => checkKey(evt, `ArrowRight`);
+const arrowLeft = (evt) => checkKey(evt, `ArrowLeft`);
+const arrowDown = (evt) => checkKey(evt, `ArrowDown`);
+const arrowUp = (evt) => checkKey(evt, `ArrowUp`);
+const pageUp = (evt) => checkKey(evt, `PageUp`);
+const pageDown = (evt) => checkKey(evt, `PageDown`);
+const end = (evt) => checkKey(evt, `End`);
+const home = (evt) => checkKey(evt, `Home`);
 
 export {
-  TAB,
-  ESCAPE,
-  SPACE,
-  ENTER,
-  ARROW_RIGHT,
-  ARROW_LEFT,
-  ARROW_DOWN,
-  ARROW_UP,
-  PAGE_UP,
-  PAGE_DOWN,
-  END,
-  HOME
+  tab,
+  escape,
+  space,
+  enter,
+  arrowRight,
+  arrowLeft,
+  arrowDown,
+  arrowUp,
+  pageUp,
+  pageDown,
+  end,
+  home
 };
