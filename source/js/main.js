@@ -5,9 +5,9 @@ import Nav from './modules/nav';
 function init(selector, Component) {
   const initNav = () => {
     const navElem = document.querySelector(selector);
-    const navToggle = navElem.querySelector(`button`);
+    const navToggle = (navElem === null) ? null : navElem.querySelector(`button`);
 
-    if (navElem !== null && navToggle !== null) {
+    if (navToggle !== null) {
       const nav = new Component(navElem, navToggle);
       nav.init();
     }
