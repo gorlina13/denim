@@ -1,7 +1,7 @@
 import 'picturefill';
 import 'element-closest-polyfill';
 import Nav from './modules/nav';
-import Slider from './modules/slider';
+import Range from './modules/range';
 
 function init(selector, Component) {
   const initNav = () => {
@@ -39,7 +39,7 @@ function init(selector, Component) {
 
 function work() {
   init(`.main-nav`, Nav);
-  init(`.range__thumb`, Slider);
+  init(`.range`, Range);
 }
 
 if (document.readyState === `loading`) {
