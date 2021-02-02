@@ -1,0 +1,115 @@
+.range {
+  --dif: calc(var(--max) - var(--min));
+
+  display: grid;
+  grid-template: #{$h} max-content / repeat(2, minmax(0, 1fr));
+
+  position: relative;
+
+  width: 100%;
+
+  background: linear-gradient(180deg, rgba($second-bg-color, 0) calc(0.625 * #{$h} - 0.0625em), $second-bg-color calc(0.625 * #{$h} + 0.0625em), rgba($second-bg-color, 0) 0);
+
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    grid-column: 1 / span 2;
+    grid-row: 1;
+
+    background: linear-gradient(180deg, rgba($body-color, 0) calc(0.625 * #{$h} - 0.0625em), $body-color calc(0.625 * #{$h} + 0.0625em), rgba($body-color, 0) 0);
+  }
+
+  &::before {
+    width: calc((var(--b) - var(--a)) / var(--dif) * (100% - #{$d}));
+    margin-left: calc(#{$r} + (var(--a) - var(--min)) / var(--dif) * (100% - #{$d}));
+  }
+
+  &::after {
+    width: calc((var(--a) - var(--b)) / var(--dif) * (100% - #{$d}));
+    margin-left: calc(#{$r} + (var(--b) - var(--min)) / var(--dif) * (100% - #{$d}));
+  }
+}
+
+.range__input {
+  &::-webkit-slider-runnable-track,
+  &::-webkit-slider-thumb,
+  & {
+    -webkit-appearance: none; /* stylelint-disable-line */
+  }
+
+  grid-column: 1 / span 2;
+  grid-row: 1;
+
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+
+  font: inherit;
+  --col: #{$body-color};
+
+  background: none;
+
+  pointer-events: none;
+
+  &::-webkit-slider-runnable-track {
+    @include track();
+  }
+
+  &::-moz-range-track {
+    @include track();
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb();
+  }
+
+  &::-moz-range-thumb {
+    @include thumb();
+  }
+
+  &:focus {
+    z-index: 2;
+
+    outline-color: $second-bg-color;
+  }
+
+  &:focus,
+  &:active,
+  &:focus + .range__output,
+  &:active + .range__output {
+    --col: #{$jeans-color};
+  }
+}
+
+.range__output {
+  grid-row: 2;
+  justify-self: start;
+
+  margin: 0 0.938em;
+
+  font: inherit;
+  color: var(--col);
+
+  &:last-child {
+    justify-self: end;
+
+    text-align: right;
+  }
+
+  &::after {
+    content: "$ " counter(c);
+
+    counter-reset: c var(--c);
+
+    font-family: $body-font-family-700-800;
+    font-weight: 700;
+    font-size: 0.875em;
+    line-height: 1.143em;
+    color: inherit;
+  }
+}
+
