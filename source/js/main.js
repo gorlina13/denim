@@ -2,6 +2,7 @@ import 'picturefill';
 import 'element-closest-polyfill';
 import Nav from './modules/nav';
 import Range from './modules/range';
+import Accordion from './modules/accordion.js';
 
 function init(selector, Component) {
   const initNav = () => {
@@ -40,6 +41,7 @@ function init(selector, Component) {
 function work() {
   init(`.main-nav`, Nav);
   init(`.range`, Range);
+  init(`.accordion`, Accordion);
 }
 
 if (document.readyState === `loading`) {
