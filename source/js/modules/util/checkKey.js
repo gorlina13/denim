@@ -70,7 +70,7 @@ const checkKey = (evt, keyString) => {
 };
 
 const tab = (evt) => checkKey(evt, `Tab`);
-const escape = (evt) => checkKey(evt, `Escape`);
+const esc = (evt) => checkKey(evt, `Escape`);
 const space = (evt) => checkKey(evt, ` `);
 const enter = (evt) => checkKey(evt, `Enter`);
 const arrowRight = (evt) => checkKey(evt, `ArrowRight`);
@@ -84,7 +84,7 @@ const home = (evt) => checkKey(evt, `Home`);
 
 export {
   tab,
-  escape,
+  esc,
   space,
   enter,
   arrowRight,
