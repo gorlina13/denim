@@ -3,6 +3,7 @@ import 'element-closest-polyfill';
 import Nav from './modules/nav';
 import Range from './modules/range';
 import Accordion from './modules/accordion.js';
+import DetailsDropdown from './modules/detailsDropdown.js';
 
 function init(selector, Component) {
   const initNav = () => {
@@ -42,6 +43,7 @@ function work() {
   init(`.main-nav`, Nav);
   init(`.range`, Range);
   init(`.accordion`, Accordion);
+  init(`.details-dropdown`, DetailsDropdown);
 }
 
 if (document.readyState === `loading`) {
