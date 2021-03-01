@@ -91,8 +91,8 @@
           <details class="details-dropdown details-dropdown--nojs">
             <summary class="details-dropdown__summary" id="filter-form-title">Filter by</summary>
 
-            <div class="details-dropdown__content">
-              <form class="filter__form accordion accordion--nojs" action="#" method="get" aria-labelledby="filter-form-title" id="acc1" data-allow-toggle data-allow-multiple>
+            <form class="details-dropdown__content filter__form" action="#" method="get" aria-labelledby="filter-form-title">
+              <div class="filter__accordion accordion accordion--nojs" id="acc1" data-allow-toggle data-allow-multiple>
                 <h3 class="accordion__title">Price</h3>
                 <div class="accordion__panel" id="acc1-pane1">
                   <fieldset class="filter__group">
@@ -110,7 +110,7 @@
                 <h3 class="accordion__title">Color</h3>
                 <div class="accordion__panel" id="acc1-pane2">
                   <fieldset class="filter__group">
-                    <ul class="filter__list">
+                    <ul class="filter__list filter__list--color">
                       <li class="filter__item checkbox">
                         <input class="checkbox__input visually-hidden" type="checkbox" name="blue-gray" id="blue-gray-field" value="blue-gray" checked>
                         <label class="checkbox__label" for="blue-gray-field">
@@ -173,11 +173,11 @@
                     </ul>
                   </fieldset>
                 </div>
-                <button class="filter__submit button button--filter" type="submit">Apply (9 products)</button>
-                <button class="filter__reset" type="reset">Clear all</button>
-                <button class="filter__close details-dropdown__close" type="button">Close</button>
-              </form>
-            </div>
+              </div>
+              <button class="filter__submit button button--filter" type="submit">Apply (9 products)</button>
+              <button class="filter__reset" type="reset">Clear all</button>
+              <button class="filter__close details-dropdown__close" type="button">Close</button>
+            </form>
           </details>
         </section>
 
