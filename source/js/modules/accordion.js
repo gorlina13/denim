@@ -56,7 +56,6 @@ class Accordion {
   close(trigger) {
     trigger.setAttribute(`aria-expanded`, `false`);
     trigger.panel.hidden = true;
-    trigger.parentElement.classList.remove(`accordion__title--expanded`);
 
     if (!this.allowToggle) {
       trigger.removeAttribute(`aria-disabled`);
@@ -66,7 +65,6 @@ class Accordion {
   open(trigger) {
     trigger.setAttribute(`aria-expanded`, `true`);
     trigger.panel.hidden = false;
-    trigger.parentElement.classList.add(`accordion__title--expanded`);
 
     if (!this.allowToggle) {
       trigger.setAttribute(`aria-disabled`, `true`);
