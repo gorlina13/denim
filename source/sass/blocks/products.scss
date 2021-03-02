@@ -1,6 +1,10 @@
 .products {
   margin-top: 3.375em;
   margin-bottom: 3.75em;
+
+  &--catalog {
+    margin-top: 2.5em;
+  }
 }
 
 .products__title {
@@ -153,6 +157,10 @@
 
     margin-top: 5.875em;
     margin-bottom: 3.125em;
+
+    &--catalog {
+      margin-top: 1.5em;
+    }
   }
 
   .products__title {
@@ -277,6 +285,10 @@
 
     &--categories {
       margin-bottom: 4.375em;
+    }
+
+    &--catalog {
+      margin-top: 2.438em;
     }
   }
 
