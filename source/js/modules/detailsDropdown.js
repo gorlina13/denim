@@ -20,13 +20,21 @@ class DetailsDropdown {
 
   onDetailsToggle(evt) {
     const onDetailsOpen = () => {
+      const withButton = this.closeButton !== null && this.closeButton.offsetWidth !== 0;
+      /*
+      Might be:
+      const withButton = this.closeButton?.offsetWidth;
+      */
+
       this.elems.forEach((item) => {
         if (item !== evt.target && item.open) {
           item.open = false;
         }
       });
 
-      this.summary.nextElementSibling.scrollIntoView(top);
+      if (withButton) {
+        this.summary.nextElementSibling.scrollIntoView(top);
+      }
     };
 
     if (this.elem.open) {
@@ -41,8 +49,10 @@ class DetailsDropdown {
   }
 
   onDetailsFocusout(evt) {
+    const focus = evt.relatedTarget !== null;
     const containsFocus = this.elem.contains(evt.relatedTarget);
-    if (!containsFocus) {
+
+    if (focus && !containsFocus) {
       this.elem.open = false;
     }
   }
@@ -50,6 +60,7 @@ class DetailsDropdown {
   onDetailsKeydown(evt) {
     if (esc(evt)) {
       this.elem.open = false;
+      this.summary.focus();
     }
   }
 }
