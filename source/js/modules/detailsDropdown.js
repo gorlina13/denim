@@ -3,7 +3,6 @@ import {esc} from './util/checkKey.js';
 class DetailsDropdown {
   constructor(elem) {
     this.elem = elem;
-    this.elems = document.querySelectorAll(`.details-dropdown`);
     this.summary = elem.querySelector(`summary`);
     this.closeButton = elem.querySelector(`.details-dropdown__close`);
   }
@@ -18,19 +17,13 @@ class DetailsDropdown {
     this.elem.addEventListener(`keydown`, this.onDetailsKeydown.bind(this));
   }
 
-  onDetailsToggle(evt) {
+  onDetailsToggle() {
     const onDetailsOpen = () => {
       const withButton = this.closeButton !== null && this.closeButton.offsetWidth !== 0;
       /*
       Might be:
       const withButton = this.closeButton?.offsetWidth;
       */
-
-      this.elems.forEach((item) => {
-        if (item !== evt.target && item.open) {
-          item.open = false;
-        }
-      });
 
       if (withButton) {
         this.summary.nextElementSibling.scrollIntoView(top);
