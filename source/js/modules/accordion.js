@@ -49,8 +49,6 @@ class Accordion {
 
     this.elem.addEventListener(`click`, this.onAccordionClick.bind(this));
     this.elem.addEventListener(`keydown`, this.onAccordionKeydown.bind(this));
-    this.elem.addEventListener(`focus`, this.onAccordionFocus.bind(this), true);
-    this.elem.addEventListener(`blur`, this.onAccordionBlur.bind(this), true);
   }
 
   close(trigger) {
@@ -110,18 +108,6 @@ class Accordion {
 
         this.triggers[newIndex].focus();
       }
-    }
-  }
-
-  onAccordionFocus(evt) {
-    if (evt.target.classList.contains(`accordion__trigger`)) {
-      this.elem.classList.add(`accordion--focus`);
-    }
-  }
-
-  onAccordionBlur(evt) {
-    if (evt.target.classList.contains(`accordion__trigger`)) {
-      this.elem.classList.remove(`accordion--focus`);
     }
   }
 }
