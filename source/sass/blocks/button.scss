@@ -22,6 +22,7 @@
     background-color: $body-bg-color;
     border-color: $body-color;
     box-shadow: 0.3em 0.3em 0 $jeans-color;
+    outline-color: $faded-color;
 
     @include hover-transition();
   }
@@ -52,6 +53,11 @@
   &--products {
     width: 61.034%;
   }
+
+  &--filter {
+    max-width: 100%;
+    width: calc(100% - 2 * 0.938em);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -68,6 +74,12 @@
 
     &--products {
       width: calc(33.333% - 1.875em);
+    }
+
+    &--filter {
+      width: 100%;
+      padding-left: 0.688em;
+      padding-right: 0.688em;
     }
   }
 }
