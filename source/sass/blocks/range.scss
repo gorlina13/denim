@@ -90,6 +90,7 @@
   justify-self: start;
 
   margin: 0 0.938em;
+  padding-bottom: 0.813em;
 
   font: inherit;
   color: var(--col);
@@ -110,6 +111,12 @@
     font-size: 0.875em;
     line-height: 1.143em;
     color: inherit;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .range__output {
+    padding-bottom: 0.938em;
   }
 }
 
