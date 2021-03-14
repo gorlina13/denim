@@ -1,0 +1,188 @@
+.filter__form {
+  position: relative;
+
+  padding-bottom: 1.563em;
+
+  &::before {
+    content: "Filters";
+
+    display: block;
+    width: 33%;
+    margin: 0 auto;
+    padding: 1em 0.556em;
+
+    font-family: $body-font-family-700-800;
+    font-weight: 700;
+    font-size: 1.125em;
+    line-height: 1.167em;
+    text-align: center;
+  }
+}
+
+.filter__reset,
+.filter__close {
+  position: absolute;
+  top: 0;
+
+  display: inline-block;
+  max-width: 33%;
+  margin: 0;
+  padding: 1.071em;
+  padding-top: 1.357em;
+
+  font-weight: inherit;
+  font-size: 0.875em;
+  line-height: 1.143em;
+  text-align: center;
+  vertical-align: top;
+  color: inherit;
+
+  border: none;
+  background-color: $body-bg-color;
+
+  cursor: pointer;
+}
+
+.filter__reset {
+  left: 0;
+}
+
+.filter__close {
+  right: 0;
+}
+
+.filter__reset:hover,
+.filter__close:hover,
+.filter__reset:focus,
+.filter__close:focus {
+  color: $jeans-color;
+
+  box-shadow: inset 0 0 0 0.125rem $showing-bg-color, inset 0 0 0 0.25rem $second-bg-color;
+  outline-color: $faded-color;
+}
+
+.filter__reset:active,
+.filter__close:active {
+  box-shadow: none;
+}
+
+.filter__accordion {
+  min-height: 18.75em;
+}
+
+.filter__group {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  &--price {
+    padding: 0 0.938em;
+  }
+
+  &--color {
+    padding: 0 0.188em;
+    padding-bottom: 1em;
+  }
+
+  &--collection {
+    padding-bottom: 0.813em;
+  }
+}
+
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
+  @include fix-list();
+}
+
+.filter__item {
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.filter__submit {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .filter {
+    width: 33.333%;
+    margin-left: 66.666%;
+    padding: 0 0.938em;
+    padding-top: 1.563em;
+  }
+
+  .filter__form {
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .filter__reset,
+  .filter__close {
+    position: static;
+  }
+
+  .filter__reset {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    padding: 1.571em 0.929em;
+    padding-bottom: 1.5em;
+  }
+
+  .filter__accordion {
+    min-height: 11.438em;
+  }
+
+  .filter__group {
+    &--price {
+      padding: 0 0.813em;
+    }
+
+    &--color {
+      width: 75%;
+      padding-bottom: 0.938em;
+    }
+
+    &--collection {
+      padding-bottom: 0.938em;
+    }
+  }
+
+  .filter__submit {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    width: 25%;
+    margin-left: 75%;
+    padding-left: 2.625em;
+    padding-top: 2.5em;
+  }
+
+  .filter__accordion {
+    min-height: 11.563em;
+  }
+
+  .filter__group {
+    &--color {
+      width: 100%;
+      padding-left: 0.313em;
+      padding-right: 0;
+    }
+
+    &--collection {
+      width: 90%;
+    }
+  }
+}
