@@ -1,0 +1,34 @@
+.radio__label {
+  display: block;
+
+  &--filter {
+    max-width: 7.5em;
+    padding: 0.5em 1.071em;
+  }
+}
+
+.radio__input:not(:disabled) + .radio__label {
+  cursor: pointer;
+}
+
+@include label-with-background("radio");
+@include label-with-text("radio");
+
+@media (min-width: $tablet-width) {
+  .radio__label {
+    &--filter {
+      max-width: 6.429em;
+      padding-left: 0.929em;
+      padding-top: 0.429em;
+      padding-bottom: 0.429em;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .radio__label {
+    &--filter {
+      max-width: 7.5em;
+    }
+  }
+}

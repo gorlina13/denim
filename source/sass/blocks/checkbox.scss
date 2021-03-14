@@ -1,0 +1,23 @@
+.checkbox__label {
+  display: block;
+  padding: 0.438em 0.75em;
+}
+
+.checkbox__input:not(:disabled) + .checkbox__label {
+  cursor: pointer;
+}
+
+@include label-with-background("checkbox");
+@include label-with-text("checkbox");
+
+@media (min-width: $tablet-width) {
+  .checkbox__label {
+    padding: 0.438em 0.625em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .checkbox__label {
+    padding: 0.563em 0.5em;
+  }
+}
