@@ -46,7 +46,7 @@
   src:
     url("../fonts/anton-latin-regular.woff2") format("woff2"),
     url("../fonts/anton-latin-regular.woff") format("woff");
-  unicode-range: U+0044, U+0045, U+004E, U+0049, U+004D;
+    unicode-range: U+0044-0045, U+0049, U+004D-004E;
 }
 
 html {
