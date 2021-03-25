@@ -6,10 +6,22 @@ class Range {
   }
 
   init() {
+    this.elem.classList.remove(`range--nojs`);
+
+    this.inputs.forEach((input) => {
+      input.output = this.elem.querySelector(`output[for="${input.id}"]`);
+      input.output.hidden = false;
+      this.setOutputValue(input);
+    });
+
     this.elem.addEventListener(`input`, this.onRangeInput.bind(this));
     if (this.form !== undefined) {
       this.form.addEventListener(`reset`, this.onRangeFormReset.bind(this));
     }
+  }
+
+  setOutputValue(input) {
+    input.output.value = `$ ${input.value}`;
   }
 
   setCSSVariable(input) {
@@ -18,7 +30,10 @@ class Range {
 
   onRangeFormReset() {
     const timer = setTimeout(() => {
-      this.inputs.forEach((input) => this.setCSSVariable(input));
+      this.inputs.forEach((input) => {
+        this.setCSSVariable(input);
+        this.setOutputValue(input);
+      });
       clearTimeout(timer);
     }, 0);
   }
@@ -28,6 +43,7 @@ class Range {
 
     if (target.tagName === `INPUT` && target.type === `range`) {
       this.setCSSVariable(target);
+      this.setOutputValue(target);
     }
   }
 }
