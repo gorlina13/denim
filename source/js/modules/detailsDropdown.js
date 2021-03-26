@@ -6,7 +6,7 @@ class DetailsDropdown {
     this.summary = elem.querySelector(`summary`);
     this.closeButton = elem.querySelector(`.details-dropdown__close`);
     this.FOCUSABLE_ELEMS_SELECTOR = `a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]`;
-    this.firstTabStop = this.elem.querySelectorAll(this.FOCUSABLE_ELEMS_SELECTOR)[0];
+    this.firstTabStop = this.summary.nextElementSibling.querySelectorAll(this.FOCUSABLE_ELEMS_SELECTOR)[0];
   }
 
   init() {
