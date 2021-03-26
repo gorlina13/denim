@@ -1,5 +1,4 @@
 import {esc} from './util/checkKey';
-import {forbidScrolling, allowScrolling} from './util/scrolling';
 
 class DetailsDropdown {
   constructor(elem) {
@@ -27,15 +26,14 @@ class DetailsDropdown {
       */
 
       if (withButton) {
-        forbidScrolling();
-        this.scrollingIsForbidden = true;
+        this.savedScrollTop = window.pageYOffset;
       }
     };
 
     const onDetailsClose = () => {
-      if (this.scrollingIsForbidden) {
-        allowScrolling();
-        this.scrollingIsForbidden = false;
+      if (this.savedScrollTop) {
+        window.scrollTo(window.pageXOffset, this.savedScrollTop);
+        this.savedScrollTop = null;
       }
     };
 
