@@ -5,6 +5,8 @@ class DetailsDropdown {
     this.elem = elem;
     this.summary = elem.querySelector(`summary`);
     this.closeButton = elem.querySelector(`.details-dropdown__close`);
+    this.FOCUSABLE_ELEMS_SELECTOR = `a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]`;
+    this.firstTabStop = this.elem.querySelectorAll(this.FOCUSABLE_ELEMS_SELECTOR)[0];
   }
 
   init() {
@@ -19,27 +21,20 @@ class DetailsDropdown {
 
   onDetailsToggle() {
     const onDetailsOpen = () => {
-      const withButton = this.closeButton !== null && this.closeButton.offsetWidth !== 0;
       /*
       Might be:
-      const withButton = this.closeButton?.offsetWidth;
+      const contentCoversSummary = this.closeButton?.offsetWidth;
       */
+      const contentCoversSummary = this.closeButton !== null && this.closeButton.offsetWidth !== 0;
 
-      if (withButton) {
-        this.savedScrollTop = window.pageYOffset;
+      if (contentCoversSummary) {
+        this.firstTabStop.focus();
       }
     };
 
-    const onDetailsClose = () => {
-      if (this.savedScrollTop) {
-        window.scrollTo(window.pageXOffset, this.savedScrollTop);
-        this.savedScrollTop = null;
-      }
-    };
-
-    const handler = this.elem.open ? onDetailsOpen : onDetailsClose;
-
-    handler();
+    if (this.elem.open) {
+      onDetailsOpen();
+    }
   }
 
   onCloseButtonClick(evt) {
