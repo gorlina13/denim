@@ -29,6 +29,11 @@
     display: none;
   }
 
+  // For IE11 with 'details-element-polyfill'
+  &::before {
+    display: none;
+  }
+
   &::after {
     content: "";
 
@@ -117,10 +122,10 @@
       top: 100%;
       bottom: auto;
     }
+  }
 
-    & .details-dropdown__close {
-      display: none;
-    }
+  .details-dropdown .details-dropdown__close {
+    display: none;
   }
 
   .details-dropdown__content {

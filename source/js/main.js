@@ -1,9 +1,10 @@
 import 'picturefill';
 import 'element-closest-polyfill';
+import 'details-element-polyfill';
 import Nav from './modules/nav';
 import Range from './modules/range';
-import Accordion from './modules/accordion.js';
-import DetailsDropdown from './modules/detailsDropdown.js';
+import Accordion from './modules/accordion';
+import DetailsDropdown from './modules/detailsDropdown';
 
 function init(selector, Component) {
   const initNav = () => {
