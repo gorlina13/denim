@@ -49,6 +49,12 @@
 
 @mixin track() {
   width: 100%;
+  height: 0.125rem;
+
+  background-color: $body-color;
+}
+
+@mixin track-advanced() {
   height: 100%;
 
   background: none;
@@ -56,18 +62,26 @@
 
 @mixin thumb() {
   width: $d;
+  height: $d;
+  margin: 0;
+
+  background-color: $body-color;
+  border: none;
+  border-radius: 50%;
+
+  pointer-events: auto;
+  cursor: ew-resize;
+}
+
+@mixin thumb-advanced() {
   height: $h;
 
-  border: none;
-  border-radius: 0;
-
+  background-color: transparent;
   background-image: radial-gradient(circle, var(--col) calc(#{$r} - 1px), rgba($body-color, 0) $r);
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% calc(0.75 * #{$h});
-
-  pointer-events: auto;
-  cursor: ew-resize;
+  border-radius: 0;
 }
 
 @mixin label-with-background($block) {
