@@ -1,34 +1,13 @@
 .range {
-  --dif: calc(var(--max) - var(--min));
-
-  display: grid;
-  grid-template: #{$h} max-content / repeat(2, minmax(0, 1fr));
-
-  position: relative;
-
   width: 100%;
 
-  background: linear-gradient(180deg, rgba($second-bg-color, 0) calc(0.625 * #{$h} - 0.0625em), $second-bg-color calc(0.625 * #{$h} + 0.0625em), rgba($second-bg-color, 0) 0);
-
-  overflow: hidden;
-
-  &::before,
-  &::after {
-    content: "";
-    grid-column: 1 / span 2;
-    grid-row: 1;
-
-    background: linear-gradient(180deg, rgba($body-color, 0) calc(0.625 * #{$h} - 0.0625em), $body-color calc(0.625 * #{$h} + 0.0625em), rgba($body-color, 0) 0);
-  }
-
   &::before {
-    width: calc((var(--b) - var(--a)) / var(--dif) * (100% - #{$d}));
-    margin-left: calc(#{$r} + (var(--a) - var(--min)) / var(--dif) * (100% - #{$d}));
-  }
+    content: "Set the min and the max price";
 
-  &::after {
-    width: calc((var(--a) - var(--b)) / var(--dif) * (100% - #{$d}));
-    margin-left: calc(#{$r} + (var(--b) - var(--min)) / var(--dif) * (100% - #{$d}));
+    display: block;
+    padding: 0.5em 0;
+
+    font: inherit;
   }
 }
 
@@ -39,21 +18,25 @@
     -webkit-appearance: none; /* stylelint-disable-line */
   }
 
-  grid-column: 1 / span 2;
-  grid-row: 1;
+  appearance: none;
 
-  z-index: 1;
-  top: 0;
-  left: 0;
-
+  width: 100%;
+  height: $d;
   margin: 0;
+  margin-bottom: 0.5em;
+  padding: 0;
 
   font: inherit;
-  --col: #{$body-color};
 
   background: none;
 
-  pointer-events: none;
+  &:focus {
+    outline-color: $second-bg-color;
+  }
+
+  &[disabled] {
+    opacity: 0.625;
+  }
 
   &::-webkit-slider-runnable-track {
     @include track();
@@ -63,54 +46,183 @@
     @include track();
   }
 
+  &::-ms-track {
+    @include track();
+
+    color: transparent;
+
+    background: transparent;
+  }
+
+  &:first-of-type::-ms-fill-lower {
+    background-color: $second-bg-color;
+  }
+
+  &:first-of-type::-ms-fill-upper {
+    background-color: $body-color;
+  }
+
+  &:last-of-type::-ms-fill-lower {
+    background-color: $body-color;
+  }
+
+  &:last-of-type::-ms-fill-upper {
+    background-color: $second-bg-color;
+  }
+
   &::-webkit-slider-thumb {
     @include thumb();
+  }
+
+  &[disabled]::-webkit-slider-thumb {
+    cursor: not-allowed;
   }
 
   &::-moz-range-thumb {
     @include thumb();
   }
 
-  &:focus {
-    z-index: 2;
-
-    outline-color: $second-bg-color;
+  &[disabled]::-moz-range-thumb {
+    cursor: not-allowed;
   }
 
-  &:focus,
-  &:active,
-  &:focus + .range__output,
-  &:active + .range__output {
-    --col: #{$jeans-color};
+  &::-ms-thumb {
+    @include thumb();
+  }
+
+  &[disabled]::-ms-thumb {
+    cursor: not-allowed;
   }
 }
 
 .range__output {
-  grid-row: 2;
-  justify-self: start;
-
+  display: block;
   margin: 0 0.938em;
   padding-bottom: 0.813em;
 
-  font: inherit;
-  color: var(--col);
+  font-family: $body-font-family-700-800;
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.143em;
 
-  &:last-child {
-    justify-self: end;
+  &[hidden] {
+    display: none;
+  }
+}
 
-    text-align: right;
+@supports (--dif: calc(var(--max) - var(--min))) {
+  .range:not(.range--nojs) {
+    --dif: calc(var(--max) - var(--min));
+
+    display: grid;
+    grid-template: #{$h} max-content / repeat(2, minmax(0, 1fr));
+
+    position: relative;
+
+    background: linear-gradient(180deg, rgba($second-bg-color, 0) calc(0.625 * #{$h} - 0.0625em), $second-bg-color calc(0.625 * #{$h} + 0.0625em), rgba($second-bg-color, 0) 0);
+
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      grid-column: 1 / span 2;
+      grid-row: 1;
+
+      background: linear-gradient(180deg, rgba($body-color, 0) calc(0.625 * #{$h} - 0.0625em), $body-color calc(0.625 * #{$h} + 0.0625em), rgba($body-color, 0) 0);
+    }
+
+    &::before {
+      width: calc((var(--b) - var(--a)) / var(--dif) * (100% - #{$d}));
+      margin-left: calc(#{$r} + (var(--a) - var(--min)) / var(--dif) * (100% - #{$d}));
+      padding: 0;
+    }
+
+    &::after {
+      width: calc((var(--a) - var(--b)) / var(--dif) * (100% - #{$d}));
+      margin-left: calc(#{$r} + (var(--b) - var(--min)) / var(--dif) * (100% - #{$d}));
+    }
   }
 
-  &::after {
-    content: "$ " counter(c);
+  .range:not(.range--nojs) .range__input {
+    grid-column: 1 / span 2;
+    grid-row: 1;
 
-    counter-reset: c var(--c);
+    z-index: 1;
+    top: 0;
+    left: 0;
 
-    font-family: $body-font-family-700-800;
-    font-weight: 700;
-    font-size: 0.875em;
-    line-height: 1.143em;
-    color: inherit;
+    width: auto;
+    height: auto;
+    margin: 0;
+
+    --col: #{$body-color};
+
+    pointer-events: none;
+
+    &:focus {
+      z-index: 2;
+    }
+
+    &:focus,
+    &:active,
+    &:focus + .range__output,
+    &:active + .range__output {
+      --col: #{$jeans-color};
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include track-advanced();
+    }
+
+    &::-moz-range-track {
+      @include track-advanced();
+    }
+
+    &::-ms-track {
+      @include track-advanced();
+    }
+
+    &:first-of-type::-ms-fill-lower {
+      background: none;
+    }
+
+    &:first-of-type::-ms-fill-upper {
+      background: none;
+    }
+
+    &:last-of-type::-ms-fill-lower {
+      background: none;
+    }
+
+    &:last-of-type::-ms-fill-upper {
+      background: none;
+    }
+
+    &::-webkit-slider-thumb {
+      @include thumb-advanced();
+    }
+
+    &::-moz-range-thumb {
+      @include thumb-advanced();
+    }
+
+    &::-ms-thumb {
+      @include thumb-advanced();
+    }
+  }
+
+  .range:not(.range--nojs) .range__output {
+    grid-row: 2;
+    justify-self: start;
+
+    color: var(--col);
+
+    &:last-child {
+      justify-self: end;
+
+      text-align: right;
+    }
   }
 }
 
